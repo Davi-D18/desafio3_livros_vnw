@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios"
-// import { Hourglass } from "react-loader-spinner";
 import { CardLivro } from "../../components/CardLivro/CardLivro.jsx";
-// import { Livros } from "../../data/info-livros.js";
 import CapaLivro from "../../assets/icons/capas-livros/icon1.png" 
 
 import { LoadingAnimation } from "../../components/LoadingAnimation/LoadingAnimation.jsx";
@@ -24,9 +22,7 @@ export const LivrosDoados = () => {
     try {
       const response = await axios.get(`${apiUrl}/livros`);
       setLivros(response.data);
-      console.log(response.data)
     } catch (error) {
-      console.error("Erro na requisição:", error);
       setLivros([]); // Fallback para array vazio
     }
   }
