@@ -1,0 +1,74 @@
+.sectionContainer {
+  background-image: url('../../../assets/images/secao1_entregando-livros.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 65px);
+
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  margin-left: 3%;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: $fontSecondary;
+  max-width: 24%;
+}
+
+.containerDoar {
+  max-width: 95dvw;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 18vh;
+}
+
+.textPorqueDoar {
+  color: $primary;
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.containerCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .sectionContainer {
+    background-image: url("../../../assets/images/secao1_entregando-livros-mobile.png");
+    justify-content: center;
+    height: calc(100dvh - 115px);
+  }
+
+  .title {
+    max-width: 70%;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .textPorqueDoar {
+    text-align: center;
+    font-size: 1.9em;
+  }
+
+  .containerCards {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
+ .containerCards {
+  justify-content: center;
+ }
+
+ .containerAlinhamento {
+  text-align: center;
+ }
+}

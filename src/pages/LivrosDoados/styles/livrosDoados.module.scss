@@ -1,0 +1,44 @@
+.sectionLivrosDoados {
+  margin-bottom: 12vh;
+}
+
+.titulo {
+  color: $black;
+  text-align: center;
+  font-size: 28px;
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+}
+
+.sectionLivros {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  max-width: 72dvw;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+.containerLoader {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 160px);
+}
+
+@media (max-width: $breakpoint-tablet) {
+ .titulo {
+  font-size: 30px;
+ }
+
+ .sectionLivros {
+  margin-top: 5vh;
+ }
+
+ .containerLoader {
+  height: 80vh;
+ }
+}

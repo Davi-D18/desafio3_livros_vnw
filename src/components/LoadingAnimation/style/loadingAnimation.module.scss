@@ -1,0 +1,93 @@
+// Overlay translúcido
+.loadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+// GIF centralizado
+.loadingGif {
+  width: 180px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+// Texto de carregamento
+.loadingText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $white;
+  margin-bottom: 25px;
+  text-align: center;
+  animation: fadeIn 2s infinite;
+}
+
+// Barra de progresso
+.progressBar {
+  width: 30%;
+  height: 11px;
+  background-color: $darkGray;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+  
+  .progress {
+    height: 100%;
+    width: 0; /* Inicialmente vazio */
+    background-color: #8e44ad; 
+    border-radius: 15px;
+    animation: loading 1.9s ease-in-out forwards;
+  }
+}
+
+// Animações
+@keyframes loading {
+  from {
+    width: 0;
+}
+to {
+    width: 100%;
+}
+}
+
+@keyframes fadeIn {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+// Responsividade
+@media (max-width: $breakpoint-mobile) {
+  .loadingText {
+    font-size: 1.3rem;
+    max-width: 90vw;
+  }
+  
+  .progressBar {
+    width: 80%;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .loadingText {
+    max-width: 85vw;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+  }
+
+  .progressBar {
+    width: 75%;
+  }
+}

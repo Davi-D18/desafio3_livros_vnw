@@ -1,0 +1,63 @@
+.secaoContato {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 2.5rem;
+  background-color: $primary; 
+  padding-block: 2rem;
+
+  p {
+    font-weight: 700;
+  }
+}
+
+.containerIcons {
+  display: flex;
+  gap: 10px;
+
+  img {
+    width: 25px;
+    cursor: pointer;
+  }
+}
+
+
+.secaoInfovnw {
+  background-color: $darkGray;
+  padding-block: 1.4rem;
+}
+
+.textoInformativo {
+  text-align: center;
+  font-weight: 700;
+}
+
+@media (max-width: $breakpoint-mobile) {
+ .secaoContato {
+  flex-direction: column;
+  gap: 1.4rem;
+  padding-inline: 1.8rem;
+  padding-block: 0.9rem;
+  align-items: center;
+
+  p {
+    font-size: 20px;
+  }
+}
+
+.containerIcons {
+  gap: 20px;
+
+  img {
+    width: 30px;
+  }
+}
+
+.secaoInfovnw {
+  padding-block: 1rem;
+
+  .textoInformativo {
+    font-size: 15px;
+  }
+}
+
+}

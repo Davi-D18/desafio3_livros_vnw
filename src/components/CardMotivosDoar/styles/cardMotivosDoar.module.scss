@@ -1,0 +1,25 @@
+.articleCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  background-color: $primaryTransparent; 
+  border-radius: 9px;
+  width: 255px;
+  max-width: 300px;
+  height: 250px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.iconCard {
+  max-width: 33%;
+  margin-block: 12px;
+}
+
+.descricao {
+  color: $black; 
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+  max-width: 85%;
+}

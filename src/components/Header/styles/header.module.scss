@@ -1,0 +1,139 @@
+.header {
+  background: linear-gradient($gradient);
+  padding-block: 1.2rem;
+}
+
+.container-header {
+  max-width: 97vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slogan {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.titulo {
+  font-size: 1.5em;
+}
+
+.logo-imagem {
+  width: 43px;
+}
+
+.lista-links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+a {
+  color: #ccc;
+  position: relative;
+  transition: color 0.4s ease;
+  font-weight: 500;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: $white;
+    left: 0;
+    bottom: -3px; /* Distância do texto */
+    transition: width 0.4s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    right: 0;
+    bottom: -3px; /* Distância do texto */
+    transition: width 0.4s ease-in-out;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.form-pesquisa {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  button {
+    position: absolute;
+    right: 33px;
+    top: 53%; 
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+    img {
+      width: 18px;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(0.94);
+      }
+    }
+  }
+}
+
+.input-pesquisa {
+  background-color: transparent;
+  border: 2px solid white;
+  width: 90%;
+  border-radius: 10px;
+  padding: 8px 0;
+  padding-left: 10px;
+  height: 40px;
+
+  &::placeholder {
+    color: white;
+  }
+
+  &:focus {
+    outline: 1px solid white;
+  }
+}
+
+// Media queries
+
+@media (max-width: $breakpoint-tablet) {
+  .header {
+    padding-block: 0.7rem;
+  }
+
+  .container-header {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .lista-links li a {
+    font-size: 18px;
+  }
+
+  .form-pesquisa {
+    display: none;
+  }
+}

@@ -1,0 +1,34 @@
+// Cores
+$primary: #005695; // Azul forte
+$primaryTransparent: #0157944D; // Azul transparente
+$black: #000000; // Preto puro
+$darkGray: #232020; // Cinza escuro
+$white: #FFF; // Branco
+
+// Fontes
+$fontPrimary: 'Inter', sans-serif;
+$fontSecondary: 'Roboto', sans-serif;
+  
+// Outros
+$gradient: 90deg, #001B2F, #005695;
+
+// Media Query Breakpoints
+$breakpoint-mobile: 425px;  // Para celulares 
+$breakpoint-tablet: 768px;  // Para tablets e telas intermediárias
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: $fontPrimary;
+  text-decoration: none;
+
+  &::after {
+    box-sizing: border-box;
+  }
+
+  &::before {
+    box-sizing: border-box;
+  }
+}

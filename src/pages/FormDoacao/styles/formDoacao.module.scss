@@ -1,0 +1,105 @@
+.secaoFormDoarLivro {
+  margin-bottom: 10vh;
+}
+
+.aviso {
+  text-align: center;
+  margin-top: 3vh;
+  color: $black;
+}
+
+.secaoFormulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  align-items: center;
+  padding-top: 3.5rem;
+  padding-bottom: 1rem;
+  max-width: 400px;
+  margin: 2vh auto;
+  border: 2px solid $primary;
+  border-radius: 8px;
+}
+
+.containerIconAndText {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3vh;
+}
+
+.iconImagemLivro {
+  width: 55px;
+}
+
+.infoLivro {
+  color: $primary;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.input {
+  border: 2px solid $primary;
+  padding: 9px 7px;
+  width: 78%;
+  border-radius: 8px;
+  background-color: transparent;
+  padding-left: 8px;
+  color: #000;
+
+  &::placeholder {
+    color: #000;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px $primary;
+  }
+}
+
+.buttonSubmitDoar {
+  background-color: $primary;
+  color: #fff;
+  border: none;
+  height: 48px;
+  width: 140px;
+  font-size: 17px;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 2px $primary, 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .secaoFormDoarLivro {
+    margin-bottom: 10vh;
+  }
+  
+  .aviso {
+    font-size: 20px;
+    max-width: 87%;
+    margin-inline: auto;
+  }
+
+  .buttonSubmitDoar:hover {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+ .secaoFormulario {
+  width: 90%;
+  margin-top: 4vh;
+
+  .containerIconAndText {
+    gap: 10px;
+  }
+ }
+
+ .input {
+    width: 85%;
+ }
+}
