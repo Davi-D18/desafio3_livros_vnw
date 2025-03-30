@@ -6,11 +6,8 @@ O projeto **Livros Vai na Web** é um site desenvolvido com o objetivo de refor�
 ---
 
 ## 🎯 **Objetivo**
-Embora o foco seja a recriação da interface, o projeto simula um site funcional para:
-- Incentivar a **doação de livros**;
-- Permitir que usuários visualizem os livros já doados.
+Esse projeto é uma cópia do seguinte [Projeto](https://github.com/Davi-D18/livros_vnw_scss). O objetivo é integrar o Front-end com o Back-end, utilizando a seguinte APi [Livros](https://github.com/Davi-D18/desafio-3-livros)
 
----
 
 ## ⚙️ **Funcionalidades**
 ### 1. Página Inicial
@@ -18,14 +15,13 @@ Embora o foco seja a recriação da interface, o projeto simula um site funciona
 
 ### 2. Página de Doação
 - Contém um **formulário visual** para preenchimento de informações sobre o livro a ser doado.
-  - **Nota**: O formulário não é funcional (apenas design).
 
 ### 3. Página de Livros Doados
 - Lista os livros doados utilizando dados renderizados de forma dinâmica a partir de um arquivo estático.
 
 ### 4. Página 404
 - Essa página é mostrada quando o usúario tenta acessar um link ou rota inexistente
----
+
 
 ## 💻 **Tecnologias Usadas**
 
@@ -34,7 +30,7 @@ Embora o foco seja a recriação da interface, o projeto simula um site funciona
 - **React**: Uma biblioteca JavaScript para a construção de interfaces de usuário.
 - **SCSS**: Um pré-processador CSS que permite o uso de variáveis, mixins e funções.
 - **PropTypes**: Utilizada para a validação das propriedades dos componentes React.
-- **react-router-Dom**: Fornece funcionalidades para a criação de rotas dinâmicas em aplicações React.
+- **react-router-dom**: Fornece funcionalidades para a criação de rotas dinâmicas em aplicações React.
 - **react-notifications-component**: Para gerenciar notificações na aplicação.
 - **react-loader-spinner**: Oferece uma variedade de spinners personalizáveis para React.
 
@@ -57,9 +53,10 @@ src/
 │   ├── CardMotivosDoar/  # Componente que exibe os motivos para doar (cards da página inicial).
 │   ├── Footer/           # Componente rodapé reutilizado em todas as páginas.
 │   ├── Header/           # Componente cabeçalho reutilizado em todas as páginas.
+|   ├── LoadingAnimation/ # Componente para exibir um loading animado.
 │
 ├── data/
-│   ├── livros.js         # Array estático com as informações dos livros doados.
+│   ├── frases.js         # Array estático com frases usado no loading.
 │
 ├── context/
 │   ├── FormProvider.jsx    # Contexto para gerenciar os dados do formulário.
@@ -105,5 +102,4 @@ src/
 
 ### Deploy
 
-- [Deploy - Site ao vivo](https://livros-vnw-chi.vercel.app/)
-
+- [Deploy - Site ao vivo](https://desafio3-livros-vnw.vercel.app/)
