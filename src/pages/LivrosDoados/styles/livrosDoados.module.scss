@@ -42,3 +42,43 @@
   height: 80vh;
  }
 }
+
+.containerErro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  height: calc(100dvh - 210px);
+
+  img {
+    width: 150px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: $primary;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $black; 
+    margin-bottom: 1rem;
+  }
+
+  button {
+    background-color: $primary;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+    }
+  }
+}
