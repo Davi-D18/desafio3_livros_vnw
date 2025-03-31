@@ -4,7 +4,7 @@ import S from "./style/loadingAnimation.module.scss";
 
 import bookGif from "../../assets/gifs/gatinho-lendo.gif";
 
-export const LoadingAnimation = ({ progress }) => {
+export const LoadingAnimation = () => {
   const [randomPhrase, setRandomPhrase] = useState("");
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export const LoadingAnimation = ({ progress }) => {
       <img src={bookGif} alt="Gatinho lendo livro" className={S.loadingGif} />
       <p className={S.loadingText}>{randomPhrase}</p>
       <div className={S.progressBar}>
-        <div className={S.progress} style={{ width: `${progress}%`}}></div>
+        <div className={S.progress}></div>
       </div>
     </div>
   );
