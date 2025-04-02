@@ -28,11 +28,7 @@ export const FormDoacao = () => {
       return false;
     }
 
-    // Verifica se os campos título, categoria e autor não contêm números
-    if (/\d/.test(valores.titulo)) {
-      showNotification("Atenção", "O campo de Título deve conter apenas texto!", "info");
-      return false;
-    }
+    // Verifica se os campos categoria e autor não contêm números
     
     if (/\d/.test(valores.categoria)) {
       showNotification("Atenção", "O campo de Categoria deve conter apenas texto!", "info");
