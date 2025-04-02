@@ -3,6 +3,7 @@ import Icon from "../../assets/icons/livro-icon.png";
 import { useNavigate } from "react-router-dom";
 import { useFormContext } from "../../hooks/useFormContext";
 import { useState } from "react";
+import { showNotification } from "../../components/Notification/ShowNotification";
 
 export const FormDoacao = () => {
   const navigate = useNavigate();
@@ -15,6 +16,38 @@ export const FormDoacao = () => {
     paginas: "",
   });
 
+  const verificarValores = (valores) => {
+    // Verifica se o campo de páginas contém apenas números
+    if (/[^0-9]/.test(valores.paginas)) { 
+      showNotification("Atenção", "O campo de Páginas deve conter apenas números!", "info");
+      return false;
+    }
+
+    if (valores.titulo.length < 5) {
+      showNotification("Atenção", "O campo de Titulo deve conter no mínimo 5 caracteres!", "info");
+      return false;
+    }
+
+    // Verifica se os campos título, categoria e autor não contêm números
+    if (/\d/.test(valores.titulo)) {
+      showNotification("Atenção", "O campo de Título deve conter apenas texto!", "info");
+      return false;
+    }
+    
+    if (/\d/.test(valores.categoria)) {
+      showNotification("Atenção", "O campo de Categoria deve conter apenas texto!", "info");
+      return false;
+    }
+
+    if (/\d/.test(valores.autor)) {
+      showNotification("Atenção", "O campo de Autor deve conter apenas texto!", "info");
+      return false;
+    }
+    
+    return true;
+  };
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
@@ -22,8 +55,12 @@ export const FormDoacao = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormData(formValues); // Salva os dados no contexto
-    navigate("/resumo"); // Redireciona para a página de resumo
+    const status = verificarValores(formValues);
+
+    if (status) {
+      setFormData(formValues); // Salva os dados no contexto
+      navigate("/resumo"); // Redireciona para a página de resumo
+    }
   };
 
   return (
